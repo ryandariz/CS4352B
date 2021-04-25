@@ -45,7 +45,6 @@ void read_sub(char* sub_dir)
 	closedir(subsubdp);
         read_sub(temp_full_path);
         }
-	printf("%s\n",subsudp->d_name);
         }
         }
        closedir(sub_dp);
