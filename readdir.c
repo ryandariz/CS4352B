@@ -17,6 +17,7 @@ char * full_path;
 
 void read_sub(char* sub_dir)
 {
+	printf("%s\n",sub_dir->d_name);
   DIR *sub_dp=opendir(sub_dir);
   struct dirent * sub_dirp;
 
