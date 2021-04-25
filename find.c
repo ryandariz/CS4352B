@@ -19,7 +19,7 @@ void read_sub(char* sub_dir)
   char temp1[]=".";
   char temp2[]="..";
   char temp3[]="/";
-  if(sub_dp! = NULL)
+  if(sub_dp != NULL)
   {
     while ((sub_dirp=readdir(sub_dp)) != NULL)
     {
@@ -55,7 +55,6 @@ void read_sub(char* sub_dir)
 }
    
 
-}
 
 int main(int argc, char **argv)
 {
