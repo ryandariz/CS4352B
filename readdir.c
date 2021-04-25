@@ -40,10 +40,12 @@ void read_sub(char* sub_dir)
 	temp_full_path=strcpy(temp_full_path,sub_dir);
 	strcat(temp_full_path,temp_sub);
  	DIR * subsubdp=opendir(temp_full_path);
+	
 	if(subsubdp!=NULL){
 	closedir(subsubdp);
         read_sub(temp_full_path);
         }
+	printf("%s\n",subsudp->d_name);
         }
         }
        closedir(sub_dp);
