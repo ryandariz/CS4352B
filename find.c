@@ -13,11 +13,12 @@
 #include <dirent.h>
 #include <string.h>
 char * full_path;
+FILE *out_file = fopen("Output.txt", "w");
 
 
 void read_sub(char* sub_dir)
 {
-	FILE *out_file = fopen("Output.txt", "w");
+	
 	
   DIR *sub_dp=opendir(sub_dir);
   struct dirent * sub_dirp;
