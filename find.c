@@ -18,7 +18,7 @@ char * full_path;
 
 void read_sub(char* sub_dir)
 {
-	//FILE *out_file = fopen("Output.txt", "w");
+	FILE *out_file = fopen("Output.txt", "w");
 	
   DIR *sub_dp=opendir(sub_dir);
   struct dirent * sub_dirp;
@@ -35,7 +35,7 @@ void read_sub(char* sub_dir)
 	 char * temp =sub_dirp->d_name;
          char temp1[]=".";
 	 char temp2[]="..";
-	       FILE *out_file = fopen("Output.txt", "w");
+	      // FILE *out_file = fopen("Output.txt", "w");
 	       
         if(strcmp(temp,temp1)!=0&&strcmp(temp,temp2)!=0)//recurcively loop into the sub-directory
         {
@@ -56,11 +56,13 @@ void read_sub(char* sub_dir)
 	if(subsubdp!=NULL)
 	{
 	closedir(subsubdp);
+		fclose(out_file);
         read_sub(temp_full_path);
         }
 		
         }
         }
+	  fclose(out_file);
        closedir(sub_dp);
     }
     else
