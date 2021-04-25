@@ -46,7 +46,7 @@ void read_sub(char* sub_dir)
 	strcat(temp_full_path,temp_sub);
 	
 		printf("%s\n",temp_full_path);
-		fprintf(out_file, temp_full_path);
+		fprintf(out_file, "%s\n"temp_full_path);
 	
  	DIR * subsubdp=opendir(temp_full_path);
 	
