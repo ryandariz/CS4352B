@@ -23,6 +23,7 @@ void read_sub(char* sub_dir)
 
   if(sub_dp!=NULL)
     {
+	  printf("%s\n",sub_dirp->d_name);
        while((sub_dirp=readdir(sub_dp))!=NULL)
         {
          printf("%s\n",sub_dirp->d_name);
