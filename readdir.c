@@ -34,10 +34,7 @@ void read_sub(char* sub_dir)
          char temp1[]=".";
 	 char temp2[]="..";
 	       
-	       if (temp = ".")
-	       {
-		       printf("hi");
-	       }
+	       
         if(strcmp(temp,temp1)!=0&&strcmp(temp,temp2)!=0)//recurcively loop into the sub-directory
         {
 	char temp3[]="/";
