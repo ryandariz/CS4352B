@@ -24,10 +24,10 @@ void read_sub(char* sub_dir)
     {
        while((sub_dirp=readdir(sub_dp))!=NULL)
         {
-         printf("%s\n",sub_dirp->d_name);
+         printf("%s\n",full_path->d_name);
          //if(stat(sub_dirp->d_name,&buf)==0)
          //printf("%d ", (int)buf.st_size);
-	 char * temp_full_path =sub_dirp->d_name;
+	 char * temp =sub_dirp->d_name;
          char temp1[]=".";
 	 char temp2[]="..";
 
