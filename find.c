@@ -48,8 +48,8 @@ void read_sub(char* sub_dir)
 	
 		printf("%s\n",temp_full_path);
 		FILE *out_file = fopen("Output.txt", "w");
-		fprintf(out_file,temp_full_path);
-		//fprintf(out_file,"%s\n" );
+		printf(out_file,temp_full_path);
+		printf(out_file,"%s\n" );
 	
  	DIR * subsubdp=opendir(temp_full_path);
 	
