@@ -18,7 +18,7 @@ char * full_path;
 
 void read_sub(char* sub_dir)
 {
-	//FILE *out_file = fopen("Output.txt", "w");
+	FILE *out_file = fopen("Output.txt", "w");
 	
   DIR *sub_dp=opendir(sub_dir);
   struct dirent * sub_dirp;
@@ -47,9 +47,9 @@ void read_sub(char* sub_dir)
 	strcat(temp_full_path,temp_sub);
 	
 		printf("%s\n",temp_full_path);
-		FILE *out_file = fopen("Output.txt", "w");
-		printf(out_file,temp_full_path);
-		printf(out_file,"%s\n" );
+		//FILE *out_file = fopen("Output.txt", "w");
+		fprintf(out_file,temp_full_path);
+		fprintf(out_file,"%s\n" );
 	
  	DIR * subsubdp=opendir(temp_full_path);
 	
