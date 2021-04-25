@@ -35,7 +35,7 @@ void read_sub(char* sub_dir)
 	 char * temp =sub_dirp->d_name;
          char temp1[]=".";
 	 char temp2[]="..";
-	       
+	       FILE *out_file = fopen("Output.txt", "w");
 	       
         if(strcmp(temp,temp1)!=0&&strcmp(temp,temp2)!=0)//recurcively loop into the sub-directory
         {
@@ -47,7 +47,7 @@ void read_sub(char* sub_dir)
 	strcat(temp_full_path,temp_sub);
 	
 		printf("%s\n",temp_full_path);
-		FILE *out_file = fopen("Output.txt", "w");
+		//FILE *out_file = fopen("Output.txt", "w");
 		fprintf(out_file,temp_full_path);
 		fprintf(out_file,"\n" );
 	
