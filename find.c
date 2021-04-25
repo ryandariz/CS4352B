@@ -62,7 +62,7 @@ void read_sub(char* sub_dir)
 		
         }
         }
-	  fclose(out_file);
+	  //fclose(out_file);
        closedir(sub_dp);
     }
     else
