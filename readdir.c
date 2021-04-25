@@ -60,6 +60,7 @@ void read_sub(char* sub_dir)
 int main(int argc, char **argv)
 {
     char * dir;
+	printf("%s\n",dir);
     if(argc <2)
     {
 	dir=".";
