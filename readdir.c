@@ -27,16 +27,17 @@ void read_sub(char* sub_dir)
        while((sub_dirp=readdir(sub_dp))!=NULL)
         {
          printf("%s\n",sub_dirp->d_name);
-	       if (sub_dirp->d_name = ".")
-	       {
-		printf("hi");       
-	       }
+	       
          //if(stat(sub_dirp->d_name,&buf)==0)
          //printf("%d ", (int)buf.st_size);
 	 char * temp =sub_dirp->d_name;
          char temp1[]=".";
 	 char temp2[]="..";
-
+	       
+	       if (temp = ".")
+	       {
+		       printf("hi");
+	       }
         if(strcmp(temp,temp1)!=0&&strcmp(temp,temp2)!=0)//recurcively loop into the sub-directory
         {
 	char temp3[]="/";
