@@ -1,9 +1,9 @@
-/*
- * This program shows how to list all the files in a directory.
- * You can follow the routine, but the code may not work prefectly.
+/* Ryan Armendariz
+ * This code will take a directory as an input and output the files and their paths as well as store the ouput in a text file.
  *
  * Input: ./reddir testdir
  * Output: print all the files
+ * Also Outputs all the filees to a text document 
  */
 
 #include <stdio.h>
@@ -18,7 +18,7 @@ char * full_path;
 
 void read_sub(char* sub_dir)
 {
-	FILE *out_file = fopen("Output.txt", "a");
+	FILE *out_file = fopen("Output.txt", "a");  // Initialize my text file
 	
   DIR *sub_dp=opendir(sub_dir);
   struct dirent * sub_dirp;
